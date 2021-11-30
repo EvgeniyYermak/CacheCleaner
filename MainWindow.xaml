@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Сache_Сleaner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Очистка кеша 1С" Height="450" Width="800" SizeToContent="WidthAndHeight" Topmost="True" MinWidth="800" MinHeight="450">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition MaxWidth="100" MinWidth="100" Width="100*">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button" Content="Clear" Grid.Column="1" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" />
+        <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition MinHeight="70" MaxHeight="70"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="LabelPath" Content="" HorizontalAlignment="Stretch" Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Top"/>
+            <TextBox x:Name="TextGuid" IsReadOnly="True" HorizontalAlignment="Stretch"  BorderThickness="0" Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Bottom" />
+            <TreeView x:Name="treeViewBases"  Margin="10,10,10,10" Grid.Row="0" SelectedItemChanged="treeViewBases_SelectedItemChanged" ScrollViewer.VerticalScrollBarVisibility="Visible" VerticalContentAlignment="Top" />
+        </Grid>
+
     </Grid>
+    
 </Window>
