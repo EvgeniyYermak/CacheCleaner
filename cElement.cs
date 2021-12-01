@@ -21,6 +21,9 @@ namespace Сache_Сleaner
                 List<string> p = new List<string>();
                 p.Add(Environment.GetEnvironmentVariable("AppData") + "\\1C\\1cv8\\" + guid.ToString());
                 p.Add(Environment.GetEnvironmentVariable("AppData") + "\\..\\Local\\1C\\1cv8\\" + guid.ToString());
+                p.Add(Environment.GetEnvironmentVariable("AppData") + "\\1C\\1cv82\\" + guid.ToString());
+                p.Add(Environment.GetEnvironmentVariable("AppData") + "\\..\\Local\\1C\\1cv82\\" + guid.ToString());
+
                 return p;
             }
         }
@@ -103,7 +106,8 @@ namespace Сache_Сleaner
 
         {
             foreach (string path in Pathes)
-                Directory.Delete(path, true);
+                if (Directory.Exists(path))
+                    Directory.Delete(path, true);
         }
 
     }
