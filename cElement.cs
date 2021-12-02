@@ -19,10 +19,10 @@ namespace Сache_Сleaner
             get 
             {
                 List<string> p = new List<string>();
-                p.Add(Environment.GetEnvironmentVariable("AppData") + "\\1C\\1cv8\\" + guid.ToString());
-                p.Add(Environment.GetEnvironmentVariable("AppData") + "\\..\\Local\\1C\\1cv8\\" + guid.ToString());
-                p.Add(Environment.GetEnvironmentVariable("AppData") + "\\1C\\1cv82\\" + guid.ToString());
-                p.Add(Environment.GetEnvironmentVariable("AppData") + "\\..\\Local\\1C\\1cv82\\" + guid.ToString());
+                p.Add(Environment.GetEnvironmentVariable("userprofile") + "\\AppData\\Roaming\\1C\\1cv8\\" + guid.ToString());
+                p.Add(Environment.GetEnvironmentVariable("userprofile") + "\\AppData\\Local\\1C\\1cv8\\" + guid.ToString());
+                p.Add(Environment.GetEnvironmentVariable("userprofile") + "\\AppData\\Roaming\\1C\\1cv82\\" + guid.ToString());
+                p.Add(Environment.GetEnvironmentVariable("userprofile") + "\\AppData\\Local\\1C\\1cv82\\" + guid.ToString());
 
                 return p;
             }
